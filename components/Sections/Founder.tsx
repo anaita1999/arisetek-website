@@ -23,14 +23,17 @@ export default function Founder() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 blur-[100px] rounded-full pointer-events-none" />
           
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-start relative z-10">
-            <div className="w-32 h-32 rounded-full flex-shrink-0 border-4 border-primary shadow-xl overflow-hidden relative">
-              <Image 
-                src="/founder.jpg" 
-                alt="Founder" 
-                fill 
-                className="object-cover object-[center_top]" 
-                sizes="128px"
-              />
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-32 h-32 rounded-full flex-shrink-0 border-4 border-primary shadow-xl overflow-hidden relative">
+                <Image 
+                  src="/founder.jpg" 
+                  alt="Anaita Pal" 
+                  fill 
+                  className="object-cover object-[center_top]" 
+                  sizes="128px"
+                />
+              </div>
+              <span className="text-foreground font-bold tracking-wide">Anaita Pal</span>
             </div>
             
             <div>
