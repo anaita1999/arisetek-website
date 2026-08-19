@@ -1,8 +1,81 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ExternalLink, GitBranch, Code, Clock, Star } from "lucide-react";
-import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { ArrowUpRight } from "lucide-react";
+
+const Project = ({ project, index }: { project: any, index: number }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
+  const isEven = index % 2 === 0;
+
+  return (
+    <div ref={ref} className={`relative flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 md:gap-24 items-center mb-40 w-full`}>
+      
+      {/* Image Container with Parallax */}
+      <div className="w-full md:w-3/5 h-[60vh] md:h-[80vh] relative overflow-hidden rounded-3xl group">
+        <div className="absolute inset-0 bg-[#00E5FF]/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+        <motion.div 
+          style={{ y }}
+          className="absolute -inset-[100px] bg-black border border-white/5 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-black to-black flex items-center justify-center"
+        >
+          {/* Conceptual Image Placeholder */}
+          <div className="text-white/20 font-mono tracking-widest text-sm uppercase flex flex-col items-center">
+            <span>[ Project Render ]</span>
+            <span className="mt-4 opacity-50">{project.type}</span>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Content */}
+      <div className="w-full md:w-2/5 flex flex-col justify-center">
+        <motion.div
+          initial={{ opacity: 0, x: isEven ? 50 : -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <div className="flex items-center gap-4 mb-6">
+            <span className="text-[#00E5FF] font-mono text-xs tracking-widest uppercase">{String(index + 1).padStart(2, '0')}</span>
+            <div className="h-[1px] bg-white/20 w-12" />
+            <span className="text-white/60 font-mono text-xs tracking-widest uppercase">{project.type}</span>
+          </div>
+
+          <h3 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-8 leading-none">
+            {project.title}
+          </h3>
+
+          <p className="text-xl text-white/50 font-light leading-relaxed mb-12">
+            {project.description}
+          </p>
+
+          <div className="flex flex-col gap-8">
+            <div>
+              <p className="text-xs text-white/30 uppercase tracking-widest mb-4">Tech Stack</p>
+              <div className="flex flex-wrap gap-2">
+                {project.stack.map((tech: string) => (
+                  <span key={tech} className="text-sm text-white/80 border border-white/10 rounded-full px-4 py-2 bg-white/5">{tech}</span>
+                ))}
+              </div>
+            </div>
+
+            <a href={project.link} className="group inline-flex items-center gap-4 text-white hover:text-[#00E5FF] transition-colors w-max">
+              <span className="text-sm font-bold uppercase tracking-widest">View Live Site</span>
+              <div className="w-12 h-12 rounded-full border border-current flex items-center justify-center group-hover:bg-[#00E5FF] group-hover:text-black transition-colors">
+                <ArrowUpRight className="w-5 h-5" />
+              </div>
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
 
 export default function Portfolio() {
   const projects = [
@@ -11,104 +84,47 @@ export default function Portfolio() {
       title: "MedSync",
       type: "Healthcare Portal",
       description: "A secure, HIPAA-compliant patient portal featuring AI-driven symptom checking and automated appointment scheduling.",
-      image: "/placeholder-1.jpg", // We would use actual project screenshots here
       stack: ["Next.js", "TypeScript", "Tailwind", "Supabase", "OpenAI"],
-      time: "6 Weeks",
-      features: ["AI Triage", "Real-time Chat", "EHR Integration"],
       link: "#",
-      github: "#"
     },
     {
       id: 2,
       title: "Aura Commerce",
-      type: "E-Commerce Platform",
+      type: "E-Commerce Engine",
       description: "High-performance headless e-commerce site with an intelligent recommendation engine and dynamic pricing.",
-      image: "/placeholder-2.jpg",
       stack: ["React", "Shopify Plus", "Framer Motion", "Stripe"],
-      time: "4 Weeks",
-      features: ["Sub-second Loads", "AI Recommendations", "Custom Checkout"],
       link: "#",
-      github: "#"
     }
   ];
 
   return (
-    <section id="portfolio" className="py-24 bg-secondary">
-      <div className="max-w-7xl mx-auto px-6">
-        
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div>
-            <p className="text-highlight text-sm font-bold tracking-widest uppercase mb-4">Live Portfolio</p>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground">Interactive case studies.</h2>
-          </div>
-          <p className="text-foreground/60 max-w-md">We don't just build websites; we engineer digital products that solve complex business logic.</p>
+    <section id="portfolio" className="relative w-full py-32 bg-transparent z-10">
+      <div className="max-w-[1600px] mx-auto px-6">
+        <div className="mb-32 flex flex-col md:flex-row justify-between items-end gap-12">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-white/40 font-mono text-sm tracking-widest uppercase mb-6">Selected Works</p>
+            <h2 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none">
+              Featured <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/20">Digital Products.</span>
+            </h2>
+          </motion.div>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-white/50 max-w-sm text-lg font-light"
+          >
+            We engineer high-performance platforms that solve complex business logic while maintaining award-winning aesthetics.
+          </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="flex flex-col w-full">
           {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="group relative bg-primary rounded-3xl overflow-hidden border border-white/5 hover:border-accent/30 transition-colors"
-            >
-              {/* Image Container */}
-              <div className="relative h-64 w-full bg-[#1A2333] overflow-hidden flex items-center justify-center">
-                {/* Fallback placeholder visual */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-highlight/20 opacity-50 group-hover:opacity-100 transition-opacity" />
-                <div className="relative z-10 text-foreground/40 font-mono text-sm">Project Interface Preview</div>
-                
-                {/* Overlay Links */}
-                <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm z-20">
-                  <a href={project.link} className="p-3 bg-accent text-primary rounded-full hover:scale-110 transition-transform">
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                  <a href={project.github} className="p-3 bg-white/10 text-white rounded-full hover:scale-110 transition-transform hover:bg-white/20">
-                    <GitBranch className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <span className="text-xs font-bold text-accent uppercase tracking-wider">{project.type}</span>
-                    <h3 className="text-2xl font-bold text-foreground mt-2">{project.title}</h3>
-                  </div>
-                  <div className="flex items-center text-xs text-foreground/50 bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
-                    <Clock className="w-3 h-3 mr-1.5" />
-                    {project.time}
-                  </div>
-                </div>
-                
-                <p className="text-foreground/70 text-sm leading-relaxed mb-6">
-                  {project.description}
-                </p>
-
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-xs font-bold text-foreground/40 uppercase mb-2 flex items-center"><Star className="w-3 h-3 mr-1.5" /> Key Features</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.features.map(f => (
-                        <span key={f} className="text-xs font-medium text-highlight bg-highlight/10 px-2 py-1 rounded-md">{f}</span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-xs font-bold text-foreground/40 uppercase mb-2 flex items-center"><Code className="w-3 h-3 mr-1.5" /> Technology Stack</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.stack.map(tech => (
-                        <span key={tech} className="text-xs text-foreground/60 bg-white/5 px-2 py-1 rounded-md border border-white/5">{tech}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+            <Project key={project.id} project={project} index={index} />
           ))}
         </div>
       </div>

@@ -13,25 +13,23 @@ export default function AIExperience() {
   ];
 
   return (
-    <section className="relative py-32 bg-primary overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-highlight/5 via-primary to-primary pointer-events-none" />
-      
-      <div className="max-w-4xl mx-auto px-6 relative z-10">
+    <section className="relative py-32 overflow-hidden ">
+      <div className="max-w-4xl mx-auto px-6 relative z-10 ">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-foreground mb-4"
+            className="text-3xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg"
           >
-            See AI working for you in <span className="text-accent">real-time.</span>
+            See AI working for you in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#9D00FF]">real-time.</span>
           </motion.h2>
-          <p className="text-foreground/60 text-lg">Watch how a single customer inquiry automatically triggers a flawless operational workflow.</p>
+          <p className="text-white/70 text-lg drop-shadow-md">Watch how a single customer inquiry automatically triggers a flawless operational workflow.</p>
         </div>
 
         <div className="relative">
           {/* Connecting Line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-accent/30 to-transparent -translate-x-1/2" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#00E5FF]/40 to-transparent -translate-x-1/2" />
           
           <div className="space-y-8">
             {workflowSteps.map((step, index) => {
@@ -39,33 +37,33 @@ export default function AIExperience() {
               return (
                 <motion.div
                   key={step.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  transition={{ delay: index * 0.4, duration: 0.5 }}
+                  transition={{ delay: index * 0.2, duration: 0.6, ease: "easeOut" }}
                   className={`relative flex flex-col md:flex-row items-center gap-8 ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
                 >
                   {/* Step Content */}
                   <div className={`w-full md:w-1/2 flex ${isEven ? "justify-start md:justify-end" : "justify-start"}`}>
-                    <div className="bg-secondary border border-white/10 p-6 rounded-2xl shadow-xl w-[90%] md:w-[85%] ml-16 md:ml-0 group hover:border-accent/50 transition-colors">
+                    <div className="bg-black/30 backdrop-blur-md border border-white/10 p-6 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] w-[90%] md:w-[85%] ml-16 md:ml-0 group hover:border-[#00E5FF]/50 transition-colors">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-accent/10 text-accent rounded-lg">
+                        <div className="p-2 bg-[#00E5FF]/20 text-[#00E5FF] rounded-lg shadow-[0_0_15px_rgba(0,229,255,0.3)]">
                           {step.icon}
                         </div>
-                        <span className="text-xs font-bold text-foreground/50 uppercase tracking-widest">{step.label}</span>
+                        <span className="text-xs font-bold text-white/50 uppercase tracking-widest">{step.label}</span>
                       </div>
-                      <p className="text-foreground/90 font-medium">{step.text}</p>
+                      <p className="text-white/90 font-medium">{step.text}</p>
                     </div>
                   </div>
 
                   {/* Center Node */}
-                  <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-secondary border-2 border-accent flex items-center justify-center shadow-[0_0_15px_rgba(0,229,255,0.5)] z-10">
+                  <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-black/50 backdrop-blur-sm border-2 border-[#00E5FF] flex items-center justify-center shadow-[0_0_20px_rgba(0,229,255,0.8)] z-10">
                     <motion.div 
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ delay: (index * 0.4) + 0.3 }}
-                      className="w-1.5 h-1.5 rounded-full bg-accent"
+                      transition={{ delay: (index * 0.2) + 0.3 }}
+                      className="w-1.5 h-1.5 rounded-full bg-[#00E5FF]"
                     />
                   </div>
                 </motion.div>
@@ -77,11 +75,11 @@ export default function AIExperience() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: workflowSteps.length * 0.4 }}
-            className="flex justify-center mt-12"
+            transition={{ delay: workflowSteps.length * 0.2 }}
+            className="flex justify-center mt-16"
           >
-            <div className="bg-highlight/20 text-highlight px-6 py-3 rounded-full flex items-center gap-2 font-bold border border-highlight/30">
-              <CheckCircle2 className="w-5 h-5" /> Workflow Complete — 0 human intervention
+            <div className="bg-[#9D00FF]/20 backdrop-blur-md text-[#d580ff] px-8 py-4 rounded-full flex items-center gap-3 font-bold border border-[#9D00FF]/40 shadow-[0_0_30px_rgba(157,0,255,0.4)]">
+              <CheckCircle2 className="w-6 h-6" /> Workflow Complete — 0 human intervention
             </div>
           </motion.div>
         </div>

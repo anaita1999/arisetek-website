@@ -24,21 +24,23 @@ export default function Navbar() {
         scrolled ? "bg-background/80 backdrop-blur-md border-b border-white/5" : "bg-transparent"
       }`}
     >
-      <Link href="/" className="flex items-center gap-3">
-        <img src="/logo.png" alt="Arisetek Logo" className="h-10 w-auto" />
-        <span className="text-xl font-bold text-foreground">Arisetek IT Solutions</span>
+      <Link href="/" className="flex items-center gap-3 group">
+        <img src="/logo.png" alt="Arisetek Logo" className="h-8 w-auto group-hover:scale-110 transition-transform duration-500" />
+        <span className="text-xl md:text-2xl font-black tracking-tighter text-white">
+          Arisetek <span className="font-light text-white/50 tracking-widest text-sm uppercase ml-1">IT Solutions</span>
+        </span>
       </Link>
       
-      <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/80">
-        <Link href="#services" className="hover:text-primary transition-colors">Services</Link>
-        <Link href="#portfolio" className="hover:text-primary transition-colors">Portfolio</Link>
-        <Link href="#process" className="hover:text-primary transition-colors">Process</Link>
-        <Link href="#contact" className="hover:text-primary transition-colors">Contact</Link>
+      <nav className="hidden md:flex items-center gap-10 text-xs font-mono uppercase tracking-[0.2em] text-white/60">
+        <Link href="#services" className="hover:text-[#00E5FF] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-[#00E5FF] hover:after:w-full after:transition-all after:duration-300">Services</Link>
+        <Link href="#portfolio" className="hover:text-[#00E5FF] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-[#00E5FF] hover:after:w-full after:transition-all after:duration-300">Portfolio</Link>
+        <Link href="#process" className="hover:text-[#00E5FF] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-[#00E5FF] hover:after:w-full after:transition-all after:duration-300">Process</Link>
+        <Link href="#contact" className="hover:text-[#00E5FF] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-[#00E5FF] hover:after:w-full after:transition-all after:duration-300">Contact</Link>
       </nav>
 
       <a
         href="#contact"
-        className="px-5 py-2.5 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-semibold hover:bg-primary hover:text-background transition-all duration-300"
+        className="px-6 py-2.5 bg-transparent border border-white/20 text-white rounded-full text-xs font-bold tracking-widest uppercase hover:bg-white/10 hover:border-white/40 transition-all duration-300"
       >
         Start a Project
       </a>
