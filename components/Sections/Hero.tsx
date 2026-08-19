@@ -38,31 +38,31 @@ export default function Hero() {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[10vw] leading-[0.85] font-black tracking-tighter text-transparent bg-clip-text bg-white"
+              className="text-[15vw] md:text-[10vw] leading-[0.85] font-black tracking-tighter text-transparent bg-clip-text bg-white"
             >
               INTELLIGENT
             </motion.h1>
           </motion.div>
 
           {/* Second Line */}
-          <motion.div style={{ y: y2 }} className="flex justify-end pr-10">
+          <motion.div style={{ y: y2 }} className="flex justify-end pr-4 md:pr-10">
             <motion.h1 
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[10vw] leading-[0.85] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#9D00FF]"
+              className="text-[15vw] md:text-[10vw] leading-[0.85] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#9D00FF]"
             >
               DIGITAL
             </motion.h1>
           </motion.div>
 
           {/* Third Line */}
-          <motion.div style={{ y: y3 }} className="flex justify-start ml-[5vw] relative">
+          <motion.div style={{ y: y3 }} className="flex justify-start ml-[2vw] md:ml-[5vw] relative">
             <motion.h1 
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[10vw] leading-[0.85] font-black tracking-tighter text-transparent bg-clip-text bg-white/90"
+              className="text-[15vw] md:text-[10vw] leading-[0.85] font-black tracking-tighter text-transparent bg-clip-text bg-white/90"
             >
               FUTURE.
             </motion.h1>
@@ -72,7 +72,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
-              className="absolute right-0 bottom-0 max-w-xs text-white/50 text-sm hidden md:block tracking-widest leading-relaxed uppercase"
+              className="absolute right-0 bottom-0 max-w-xs text-white/50 text-sm hidden lg:block tracking-widest leading-relaxed uppercase"
             >
               Automated workflows, AI chat logic, and cinematic digital products engineered to solve business friction.
             </motion.div>
@@ -83,20 +83,20 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="mt-20 flex gap-8 ml-4 items-center"
+          className="mt-16 md:mt-20 flex flex-col md:flex-row gap-6 md:gap-8 ml-4 items-start md:items-center"
         >
           {/* Magnetic Button */}
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group relative px-8 py-4 bg-white text-black font-bold tracking-widest uppercase text-xs overflow-hidden rounded-full"
+            className="group relative px-8 py-4 bg-white text-black font-bold tracking-widest uppercase text-xs overflow-hidden rounded-full w-full md:w-auto text-center"
           >
             <span className="relative z-10 mix-blend-difference text-white">Initialize Project</span>
             <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1] rounded-full" />
           </motion.a>
 
-          <a href="#portfolio" className="text-white/50 uppercase tracking-[0.2em] text-xs hover:text-[#00E5FF] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-[#00E5FF] hover:after:w-full after:transition-all after:duration-300">
+          <a href="#portfolio" className="text-white/50 uppercase tracking-[0.2em] text-[10px] md:text-xs hover:text-[#00E5FF] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-[#00E5FF] hover:after:w-full after:transition-all after:duration-300">
             View Live Portfolio
           </a>
         </motion.div>

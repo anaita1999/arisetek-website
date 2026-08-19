@@ -61,7 +61,7 @@ export default function Process() {
                 <div key={step.num} className={`relative flex flex-col md:flex-row ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center md:justify-between w-full`}>
                   
                   {/* Timeline Dot */}
-                  <div className="absolute left-[-32px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-black border-2 border-white/20 z-10">
+                  <div className="absolute -left-10 md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-black border-2 border-white/20 z-10 flex items-center justify-center">
                     <motion.div 
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}

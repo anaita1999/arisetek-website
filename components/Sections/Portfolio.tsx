@@ -15,38 +15,38 @@ const Project = ({ project, index }: { project: any, index: number }) => {
   const isEven = index % 2 === 0;
 
   return (
-    <div ref={ref} className={`relative flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 md:gap-24 items-center mb-40 w-full`}>
+    <div ref={ref} className={`relative flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-24 items-center mb-20 md:mb-40 w-full`}>
       
       {/* Image Container with Parallax */}
-      <div className="w-full md:w-3/5 h-[60vh] md:h-[80vh] relative overflow-hidden rounded-3xl group">
+      <div className="w-full md:w-3/5 h-[40vh] md:h-[80vh] relative overflow-hidden rounded-[2rem] md:rounded-3xl group">
         <div className="absolute inset-0 bg-[#00E5FF]/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
         <motion.div 
           style={{ y }}
           className="absolute -inset-[100px] bg-black border border-white/5 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-black to-black flex items-center justify-center"
         >
           {/* Conceptual Image Placeholder */}
-          <div className="text-white/20 font-mono tracking-widest text-sm uppercase flex flex-col items-center">
+          <div className="text-white/20 font-mono tracking-widest text-xs md:text-sm uppercase flex flex-col items-center">
             <span>[ Project Render ]</span>
-            <span className="mt-4 opacity-50">{project.type}</span>
+            <span className="mt-2 md:mt-4 opacity-50">{project.type}</span>
           </div>
         </motion.div>
       </div>
 
       {/* Content */}
-      <div className="w-full md:w-2/5 flex flex-col justify-center">
+      <div className="w-full md:w-2/5 flex flex-col justify-center mt-4 md:mt-0">
         <motion.div
           initial={{ opacity: 0, x: isEven ? 50 : -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-4 md:mb-6">
             <span className="text-[#00E5FF] font-mono text-xs tracking-widest uppercase">{String(index + 1).padStart(2, '0')}</span>
-            <div className="h-[1px] bg-white/20 w-12" />
+            <div className="h-[1px] bg-white/20 w-8 md:w-12" />
             <span className="text-white/60 font-mono text-xs tracking-widest uppercase">{project.type}</span>
           </div>
 
-          <h3 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-8 leading-none">
+          <h3 className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-6 md:mb-8 leading-none">
             {project.title}
           </h3>
 

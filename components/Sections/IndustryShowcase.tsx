@@ -30,7 +30,7 @@ export default function IndustryShowcase() {
       </div>
 
       {/* Cinematic Accordion Container */}
-      <div className="w-full max-w-[1600px] mx-auto px-6 h-[600px] flex gap-2 md:gap-4">
+      <div className="w-full max-w-[1600px] mx-auto px-6 h-[800px] md:h-[600px] flex flex-col md:flex-row gap-2 md:gap-4">
         {industries.map((ind, i) => {
           const isHovered = hoveredIndex === ind.id;
           
@@ -39,23 +39,24 @@ export default function IndustryShowcase() {
               key={ind.id}
               onHoverStart={() => setHoveredIndex(ind.id)}
               onHoverEnd={() => setHoveredIndex(null)}
+              onClick={() => setHoveredIndex(hoveredIndex === ind.id ? null : ind.id)}
               animate={{ 
                 flex: isHovered ? 4 : 1,
                 opacity: hoveredIndex !== null && !isHovered ? 0.5 : 1
               }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="relative h-full rounded-[2rem] overflow-hidden border border-white/10 cursor-crosshair group flex items-end"
+              className="relative h-full rounded-[2rem] overflow-hidden border border-white/10 cursor-pointer md:cursor-crosshair group flex items-end"
             >
               {/* Background gradient effect */}
-              <div className={`absolute inset-0 bg-gradient-to-t ${ind.color} opacity-20 group-hover:opacity-100 transition-opacity duration-700`} />
+              <div className={`absolute inset-0 bg-gradient-to-t md:bg-gradient-to-t ${ind.color} opacity-20 group-hover:opacity-100 transition-opacity duration-700`} />
               
-              {/* Vertical Title (when collapsed) */}
+              {/* Collapsed Title */}
               <motion.div 
                 animate={{ opacity: isHovered ? 0 : 1 }}
-                className="absolute inset-0 flex flex-col items-center justify-center p-4 pointer-events-none"
+                className="absolute inset-0 flex md:flex-col items-center justify-start md:justify-center p-6 md:p-4 gap-4 md:gap-0 pointer-events-none"
               >
-                <div className="text-white/50 mb-8">{ind.icon}</div>
-                <h3 className="text-white font-bold tracking-widest uppercase text-sm whitespace-nowrap -rotate-90 transform origin-center">
+                <div className="text-white/50 md:mb-8">{ind.icon}</div>
+                <h3 className="text-white font-bold tracking-widest uppercase text-sm md:whitespace-nowrap md:-rotate-90 md:transform md:origin-center">
                   {ind.name}
                 </h3>
               </motion.div>
@@ -66,23 +67,23 @@ export default function IndustryShowcase() {
                   opacity: isHovered ? 1 : 0,
                   y: isHovered ? 0 : 50
                 }}
-                className="relative z-10 p-8 md:p-12 w-full min-w-[300px] pointer-events-none"
+                className="relative z-10 p-6 md:p-12 w-full min-w-[280px] md:min-w-[300px] pointer-events-none"
               >
-                <div className="text-white mb-6">{ind.icon}</div>
-                <h3 className="text-4xl md:text-5xl font-black text-white tracking-tighter leading-none mb-2">{ind.name}</h3>
-                <p className="text-white/60 font-mono text-sm tracking-widest uppercase mb-8">{ind.sub}</p>
+                <div className="text-white mb-4 md:mb-6 hidden md:block">{ind.icon}</div>
+                <h3 className="text-3xl md:text-5xl font-black text-white tracking-tighter leading-none mb-1 md:mb-2">{ind.name}</h3>
+                <p className="text-white/60 font-mono text-xs md:text-sm tracking-widest uppercase mb-4 md:mb-8">{ind.sub}</p>
                 
-                <div className="space-y-4 mb-8">
-                  <p className="text-xs text-white/40 font-bold uppercase tracking-wider border-b border-white/10 pb-2">Core Features</p>
+                <div className="space-y-3 md:space-y-4 mb-4 md:mb-8">
+                  <p className="text-[10px] md:text-xs text-white/40 font-bold uppercase tracking-wider border-b border-white/10 pb-2 hidden md:block">Core Features</p>
                   {ind.features.map((feat, idx) => (
                     <div key={idx} className="flex items-center text-white/80">
-                      <ArrowRight className="w-4 h-4 mr-4 text-[#00E5FF]" />
-                      <span className="text-lg font-light">{feat}</span>
+                      <ArrowRight className="w-3 h-3 md:w-4 md:h-4 mr-3 md:mr-4 text-[#00E5FF]" />
+                      <span className="text-sm md:text-lg font-light">{feat}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300">
+                <div className="hidden md:flex w-12 h-12 rounded-full border border-white/20 items-center justify-center backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300">
                   <ArrowRight className="w-5 h-5 text-white" />
                 </div>
               </motion.div>

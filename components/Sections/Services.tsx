@@ -56,11 +56,11 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="sticky top-24 w-full min-h-[500px] rounded-[3rem] p-1 mb-12 shadow-2xl overflow-hidden group"
+            className="sticky top-24 md:top-[var(--card-top)] w-full rounded-[3rem] p-1 mb-8 md:mb-12 shadow-2xl overflow-hidden group"
             style={{ 
-              top: `calc(100px + ${index * 30}px)`,
+              "--card-top": `calc(100px + ${index * 30}px)`,
               zIndex: index 
-            }}
+            } as React.CSSProperties}
           >
             {/* Card Background Wrapper */}
             <div className="absolute inset-0 bg-[#050505] border border-white/10 rounded-[3rem] overflow-hidden">
@@ -70,26 +70,26 @@ export default function Services() {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col md:flex-row h-full p-10 md:p-16 gap-12 items-center">
+            <div className="relative z-10 flex flex-col md:flex-row h-full p-8 md:p-16 gap-8 md:gap-12 items-center">
               
-              <div className="flex-1 flex flex-col justify-center h-full">
+              <div className="flex-1 flex flex-col justify-center h-full w-full">
                 <span className="text-6xl md:text-8xl font-black text-white/5 tracking-tighter mb-4 block">
                   {pillar.number}
                 </span>
                 {pillar.icon}
-                <h3 className="text-4xl md:text-5xl font-bold text-white mt-8 mb-6 tracking-tighter">{pillar.title}</h3>
-                <p className="text-xl text-white/60 font-light leading-relaxed max-w-md">
+                <h3 className="text-3xl md:text-5xl font-bold text-white mt-6 md:mt-8 mb-4 md:mb-6 tracking-tighter">{pillar.title}</h3>
+                <p className="text-lg md:text-xl text-white/60 font-light leading-relaxed max-w-md">
                   {pillar.description}
                 </p>
               </div>
 
-              <div className="flex-1 w-full bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md">
-                <h4 className="text-sm tracking-[0.2em] uppercase text-white/40 mb-8 border-b border-white/10 pb-4">Core Capabilities</h4>
-                <ul className="space-y-6">
+              <div className="flex-1 w-full bg-white/5 border border-white/10 rounded-[2rem] p-6 md:p-8 backdrop-blur-md">
+                <h4 className="text-xs md:text-sm tracking-[0.2em] uppercase text-white/40 mb-6 md:mb-8 border-b border-white/10 pb-4">Core Capabilities</h4>
+                <ul className="space-y-4 md:space-y-6">
                   {pillar.examples.map((item, i) => (
                     <li key={i} className="flex items-center group/item cursor-default">
-                      <div className="w-8 h-[1px] bg-white/20 mr-4 group-hover/item:w-16 group-hover/item:bg-[#00E5FF] transition-all duration-300" />
-                      <span className="text-lg md:text-xl text-white/80 group-hover/item:text-white transition-colors">{item}</span>
+                      <div className="w-6 md:w-8 h-[1px] bg-white/20 mr-4 group-hover/item:w-12 md:group-hover/item:w-16 group-hover/item:bg-[#00E5FF] transition-all duration-300" />
+                      <span className="text-base md:text-xl text-white/80 group-hover/item:text-white transition-colors">{item}</span>
                     </li>
                   ))}
                 </ul>
