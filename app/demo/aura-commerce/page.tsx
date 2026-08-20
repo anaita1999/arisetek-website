@@ -5,12 +5,12 @@ import { Search, ShoppingBag, ArrowUpRight, TrendingUp, ArrowLeft } from "lucide
 import Link from "next/link";
 
 const products = [
-  { id: 1, name: "VELOURS D'OR COAT", price: "$14,500", image: "https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?auto=format&fit=crop&q=80&w=400" },
-  { id: 2, name: "AURORA SAPPHIRE WATCH", price: "$28,900", image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=400" },
-  { id: 3, name: "LEATHER KAIROS TOTE", price: "$7,800", image: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&q=80&w=400" },
-  { id: 4, name: "SILK SERENITY DRESS", price: "$6,200", image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=400" },
-  { id: 5, name: "DIAMOND ECLIPSE CUFF", price: "$19,100", image: "https://images.unsplash.com/photo-1599643478514-4a11011c77f0?auto=format&fit=crop&q=80&w=400" },
-  { id: 6, name: "VELVET LUNA LOAFERS", price: "$3,400", image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=400" },
+  { id: 1, name: "VELOURS D'OR COAT", price: "₹11,60,000", image: "https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?auto=format&fit=crop&q=80&w=400" },
+  { id: 2, name: "AURORA SAPPHIRE WATCH", price: "₹24,00,000", image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=400" },
+  { id: 3, name: "LEATHER KAIROS TOTE", price: "₹6,50,000", image: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&q=80&w=400" },
+  { id: 4, name: "SILK SERENITY DRESS", price: "₹5,10,000", image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=400" },
+  { id: 5, name: "DIAMOND ECLIPSE CUFF", price: "₹15,80,000", image: "https://images.unsplash.com/photo-1599643478514-4a11011c77f0?auto=format&fit=crop&q=80&w=400" },
+  { id: 6, name: "VELVET LUNA LOAFERS", price: "₹2,80,000", image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=400" },
 ];
 
 export default function AuraCommerceDemo() {
@@ -139,7 +139,7 @@ export default function AuraCommerceDemo() {
                   
                   {/* Tooltip Mock */}
                   <div className="absolute top-[30px] right-[20%] bg-[#222] border border-[#d4af37]/30 text-white text-xs font-sans px-3 py-1 rounded shadow-lg">
-                    $14,500
+                    ₹11,60,000
                   </div>
                 </div>
                 <div className="flex justify-between text-[10px] font-sans text-white/40 mt-4 uppercase tracking-widest">
@@ -155,7 +155,7 @@ export default function AuraCommerceDemo() {
               <div className="w-full md:w-1/3 flex flex-col justify-center gap-8">
                 <div>
                   <p className="text-sm font-sans text-white/70 mb-2">Current Price</p>
-                  <p className="text-5xl font-sans font-bold text-[#d4af37] drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]">$14,500</p>
+                  <p className="text-5xl font-sans font-bold text-[#d4af37] drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]">₹11,60,000</p>
                 </div>
                 
                 <div className="h-[1px] w-full bg-white/10" />

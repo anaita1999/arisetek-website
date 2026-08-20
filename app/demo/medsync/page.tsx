@@ -138,7 +138,7 @@ export default function MedSyncDemo() {
                       <Stethoscope className="w-5 h-5 text-white/70" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold">Dr. Sarah Chen</p>
+                      <p className="text-sm font-bold">Dr. Priya Sharma</p>
                       <p className="text-xs text-white/50">General Practitioner</p>
                     </div>
                   </div>
@@ -153,7 +153,7 @@ export default function MedSyncDemo() {
                       <Stethoscope className="w-5 h-5 text-white/70" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold">Dr. Michael Lee</p>
+                      <p className="text-sm font-bold">Dr. Rajesh Kumar</p>
                       <p className="text-xs text-white/50">Cardiologist</p>
                     </div>
                   </div>
@@ -168,9 +168,9 @@ export default function MedSyncDemo() {
             <div className="mt-auto">
               <h3 className="text-sm text-white/70 font-medium mb-4">Select Time Slot</h3>
               <div className="flex gap-3">
-                <span className="px-4 py-2 bg-[#00E5FF] text-black text-xs font-bold rounded-full">9:00 AM</span>
-                <span className="px-4 py-2 border border-white/20 text-white/70 text-xs font-bold rounded-full">10:30 AM</span>
-                <span className="px-4 py-2 border border-white/20 text-white/70 text-xs font-bold rounded-full">2:00 PM</span>
+                <span className="px-4 py-2 bg-[#00E5FF] text-black text-xs font-bold rounded-full">9:00 AM IST</span>
+                <span className="px-4 py-2 border border-white/20 text-white/70 text-xs font-bold rounded-full">10:30 AM IST</span>
+                <span className="px-4 py-2 border border-white/20 text-white/70 text-xs font-bold rounded-full">2:00 PM IST</span>
               </div>
             </div>
 

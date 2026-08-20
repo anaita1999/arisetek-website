@@ -24,13 +24,20 @@ export default function Contact() {
             Ready to upgrade your digital presence? Send a message or schedule a quick discovery call.
           </motion.p>
           
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.2 }} className="flex flex-col gap-4">
             <a href="mailto:hello@arisetek.in" className="inline-flex items-center gap-4 text-2xl font-bold text-[#00E5FF] hover:text-white transition-colors group drop-shadow-[0_0_10px_rgba(0,229,255,0.5)]">
               hello@arisetek.in
               <span className="w-10 h-10 rounded-full bg-[#00E5FF]/20 flex items-center justify-center group-hover:bg-[#00E5FF] group-hover:text-black transition-colors border border-[#00E5FF]/40">
                 ↗
               </span>
             </a>
+            <a href="tel:+919876543210" className="inline-flex items-center gap-4 text-2xl font-bold text-[#00E5FF] hover:text-white transition-colors group drop-shadow-[0_0_10px_rgba(0,229,255,0.5)]">
+              +91 98765 43210
+              <span className="w-10 h-10 rounded-full bg-[#00E5FF]/20 flex items-center justify-center group-hover:bg-[#00E5FF] group-hover:text-black transition-colors border border-[#00E5FF]/40">
+                ↗
+              </span>
+            </a>
+            <p className="text-white/60 text-sm mt-2">Available Mon-Fri, 9:00 AM - 6:00 PM IST</p>
           </motion.div>
         </div>
 
