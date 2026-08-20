@@ -96,7 +96,7 @@ export default function Portfolio() {
       type: "Healthcare Portal",
       description: "A secure, HIPAA-compliant patient portal featuring AI-driven symptom checking and automated appointment scheduling.",
       stack: ["Next.js", "TypeScript", "Tailwind", "Supabase", "OpenAI"],
-      link: "#",
+      link: "/demo/medsync",
       image: "/medsync-demo.jpg"
     },
     {
