@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 const Project = ({ project, index }: { project: any, index: number }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,11 +25,21 @@ const Project = ({ project, index }: { project: any, index: number }) => {
           style={{ y }}
           className="absolute -inset-[100px] bg-black border border-white/5 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-black to-black flex items-center justify-center"
         >
-          {/* Conceptual Image Placeholder */}
-          <div className="text-white/80 font-mono tracking-widest text-xs md:text-sm uppercase flex flex-col items-center">
-            <span>[ Project Render ]</span>
-            <span className="mt-2 md:mt-4 opacity-50">{project.type}</span>
-          </div>
+          {project.image ? (
+            <div className="absolute inset-x-[100px] inset-y-[100px]">
+              <Image 
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover object-top opacity-70 group-hover:opacity-100 transition-opacity duration-700"
+              />
+            </div>
+          ) : (
+            <div className="text-white/80 font-mono tracking-widest text-xs md:text-sm uppercase flex flex-col items-center relative z-10">
+              <span>[ Project Render ]</span>
+              <span className="mt-2 md:mt-4 opacity-50">{project.type}</span>
+            </div>
+          )}
         </motion.div>
       </div>
 
@@ -86,6 +97,7 @@ export default function Portfolio() {
       description: "A secure, HIPAA-compliant patient portal featuring AI-driven symptom checking and automated appointment scheduling.",
       stack: ["Next.js", "TypeScript", "Tailwind", "Supabase", "OpenAI"],
       link: "#",
+      image: "/medsync-demo.jpg"
     },
     {
       id: 2,
