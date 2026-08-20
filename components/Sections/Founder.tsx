@@ -33,7 +33,18 @@ export default function Founder() {
                   sizes="128px"
                 />
               </div>
-              <span className="text-white font-bold tracking-wide">Anaita Pal</span>
+              <span className="text-white font-bold tracking-wide text-lg mt-2">Anaita Pal</span>
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="mt-2 px-5 py-2.5 bg-white/5 text-white/90 text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full border border-white/20 hover:bg-white/20 hover:text-white transition-all backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.3)] flex items-center gap-2 group"
+              >
+                View Portfolio 
+                <span className="w-4 h-4 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-[#00E5FF] group-hover:text-black transition-colors">
+                  ↗
+                </span>
+              </a>
             </div>
             
             <div>
