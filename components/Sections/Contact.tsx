@@ -45,7 +45,7 @@ export default function Contact() {
           initial={{ opacity: 0, x: 50 }} 
           whileInView={{ opacity: 1, x: 0 }} 
           viewport={{ once: true }}
-          className="flex-1 w-full max-w-md bg-black/40 backdrop-blur-xl p-8 rounded-3xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.8)]"
+          className="flex-1 w-full max-w-md bg-white/[0.02] backdrop-blur-3xl p-8 rounded-3xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]"
         >
           <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
             <div>

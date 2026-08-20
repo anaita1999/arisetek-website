@@ -45,7 +45,7 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 flex items-center justify-between ${
-          scrolled ? "bg-black/80 backdrop-blur-md border-b border-white/5" : "bg-transparent"
+          scrolled ? "bg-white/5 backdrop-blur-2xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]" : "bg-transparent"
         }`}
       >
         <Link href="/" className="flex items-center gap-2 group z-50 relative">
@@ -94,7 +94,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center"
+            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-3xl flex flex-col items-center justify-center"
           >
             <nav className="flex flex-col items-center gap-8 text-lg font-mono uppercase tracking-[0.2em] text-white">
               {navLinks.map((link, i) => (

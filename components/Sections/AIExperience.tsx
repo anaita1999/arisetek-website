@@ -45,7 +45,7 @@ export default function AIExperience() {
                 >
                   {/* Step Content */}
                   <div className={`w-full md:w-1/2 flex ${isEven ? "justify-start md:justify-end" : "justify-start"}`}>
-                    <div className="bg-black/30 backdrop-blur-md border border-white/10 p-6 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] w-[90%] md:w-[85%] ml-16 md:ml-0 group hover:border-[#00E5FF]/50 transition-colors">
+                    <div className="bg-white/[0.02] backdrop-blur-3xl border border-white/10 p-6 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] w-[90%] md:w-[85%] ml-16 md:ml-0 group hover:border-[#00E5FF]/50 transition-colors">
                       <div className="flex items-center gap-3 mb-3">
                         <div className="p-2 bg-[#00E5FF]/20 text-[#00E5FF] rounded-lg shadow-[0_0_15px_rgba(0,229,255,0.3)]">
                           {step.icon}
@@ -78,7 +78,7 @@ export default function AIExperience() {
             transition={{ delay: workflowSteps.length * 0.2 }}
             className="flex justify-center mt-16"
           >
-            <div className="bg-[#9D00FF]/20 backdrop-blur-md text-[#d580ff] px-8 py-4 rounded-full flex items-center gap-3 font-bold border border-[#9D00FF]/40 shadow-[0_0_30px_rgba(157,0,255,0.4)]">
+            <div className="bg-[#9D00FF]/20 backdrop-blur-3xl text-[#d580ff] px-8 py-4 rounded-full flex items-center gap-3 font-bold border border-[#9D00FF]/40 shadow-[0_0_30px_rgba(157,0,255,0.4)]">
               <CheckCircle2 className="w-6 h-6" /> Workflow Complete — 0 human intervention
             </div>
           </motion.div>

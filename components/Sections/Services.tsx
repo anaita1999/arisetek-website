@@ -63,8 +63,8 @@ export default function Services() {
             } as React.CSSProperties}
           >
             {/* Card Background Wrapper */}
-            <div className="absolute inset-0 bg-[#050505] border border-white/10 rounded-[3rem] overflow-hidden">
-              <div className={`absolute inset-0 bg-gradient-to-br ${pillar.gradient} opacity-30`} />
+            <div className="absolute inset-0 bg-white/[0.02] backdrop-blur-2xl border border-white/10 rounded-[3rem] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+              <div className={`absolute inset-0 bg-gradient-to-br ${pillar.gradient} opacity-20`} />
               {/* Noise */}
               <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')]"></div>
             </div>

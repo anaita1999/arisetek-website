@@ -70,7 +70,7 @@ const Project = ({ project, index }: { project: any, index: number }) => {
               <p className="text-xs text-white/90 uppercase tracking-widest mb-4">Tech Stack</p>
               <div className="flex flex-wrap gap-2">
                 {project.stack.map((tech: string) => (
-                  <span key={tech} className="text-sm text-white/80 border border-white/10 rounded-full px-4 py-2 bg-white/5">{tech}</span>
+                  <span key={tech} className="text-sm text-white/80 border border-white/10 rounded-full px-4 py-2 bg-white/5 backdrop-blur-md">{tech}</span>
                 ))}
               </div>
             </div>
