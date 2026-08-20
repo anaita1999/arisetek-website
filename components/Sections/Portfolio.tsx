@@ -105,7 +105,8 @@ export default function Portfolio() {
       type: "E-Commerce Engine",
       description: "High-performance headless e-commerce site with an intelligent recommendation engine and dynamic pricing.",
       stack: ["React", "Shopify Plus", "Framer Motion", "Stripe"],
-      link: "#",
+      link: "/demo/aura-commerce",
+      image: "/auracommerce-demo.jpg"
     }
   ];
 
