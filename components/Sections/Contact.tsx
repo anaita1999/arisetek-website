@@ -31,8 +31,8 @@ export default function Contact() {
                 ↗
               </span>
             </a>
-            <a href="tel:+919876543210" className="inline-flex items-center gap-4 text-2xl font-bold text-[#00E5FF] hover:text-white transition-colors group drop-shadow-[0_0_10px_rgba(0,229,255,0.5)]">
-              +91 98765 43210
+            <a href="tel:+917980958364" className="inline-flex items-center gap-4 text-2xl font-bold text-[#00E5FF] hover:text-white transition-colors group drop-shadow-[0_0_10px_rgba(0,229,255,0.5)]">
+              +91 79809 58364
               <span className="w-10 h-10 rounded-full bg-[#00E5FF]/20 flex items-center justify-center group-hover:bg-[#00E5FF] group-hover:text-black transition-colors border border-[#00E5FF]/40">
                 ↗
               </span>
@@ -73,6 +73,15 @@ export default function Contact() {
             <button className="w-full py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
                Schedule a Meeting 📅
             </button>
+
+            <a 
+              href="https://wa.me/917980958364?text=Hello%20Arisetek%2C%20I'd%20like%20to%20discuss%20a%20project." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="w-full py-4 bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] font-bold rounded-xl hover:bg-[#25D366] hover:text-white transition-colors flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(37,211,102,0.1)] hover:shadow-[0_0_30px_rgba(37,211,102,0.4)]"
+            >
+               Chat on WhatsApp 💬
+            </a>
           </form>
         </motion.div>
 
