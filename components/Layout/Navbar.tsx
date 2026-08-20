@@ -10,10 +10,6 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  if (pathname?.startsWith('/demo')) {
-    return null;
-  }
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -30,6 +26,10 @@ export default function Navbar() {
       document.body.style.overflow = "auto";
     }
   }, [mobileMenuOpen]);
+
+  if (pathname?.startsWith('/demo')) {
+    return null;
+  }
 
   const navLinks = [
     { name: "Services", href: "#services" },
