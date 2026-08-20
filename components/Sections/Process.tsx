@@ -80,7 +80,7 @@ export default function Process() {
                       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                       className="group"
                     >
-                      <span className="text-8xl font-black text-white/5 block mb-4 group-hover:text-[#00E5FF]/10 transition-colors duration-500">
+                      <span className="text-8xl font-black text-white/20 block mb-4 group-hover:text-[#00E5FF]/30 transition-colors duration-500">
                         {step.num}
                       </span>
                       <h3 className="text-3xl font-bold text-white mb-4 tracking-tighter">
