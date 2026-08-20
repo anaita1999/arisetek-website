@@ -18,7 +18,7 @@ export default function TechWall() {
             // Infrastructure
           </p>
           <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter">
-            Powered by modern <span className="text-white/30 italic font-serif tracking-normal">technology.</span>
+            Powered by modern <span className="text-white/90 italic font-serif tracking-normal">technology.</span>
           </h2>
         </div>
 
@@ -35,7 +35,7 @@ export default function TechWall() {
                 backgroundColor: "rgba(255,255,255,0.1)",
                 color: "#fff" 
               }}
-              className="px-6 py-4 border border-white/10 rounded-full text-white/50 font-mono text-xs uppercase tracking-widest cursor-crosshair transition-colors duration-300 backdrop-blur-sm bg-black/20"
+              className="px-6 py-4 border border-white/10 rounded-full text-white/80 font-mono text-xs uppercase tracking-widest cursor-crosshair transition-colors duration-300 backdrop-blur-sm bg-black/20"
             >
               {tech}
             </motion.div>

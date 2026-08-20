@@ -37,7 +37,7 @@ export default function Stats() {
                 {stat.icon}
               </div>
               <h3 className="text-lg font-bold text-white mb-2">{stat.label}</h3>
-              <p className="text-sm text-white/60">{stat.desc}</p>
+              <p className="text-sm text-white/90">{stat.desc}</p>
             </motion.div>
           ))}
         </div>

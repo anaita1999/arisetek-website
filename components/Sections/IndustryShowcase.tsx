@@ -55,7 +55,7 @@ export default function IndustryShowcase() {
                 animate={{ opacity: isHovered ? 0 : 1 }}
                 className="absolute inset-0 flex md:flex-col items-center justify-start md:justify-center p-6 md:p-4 gap-4 md:gap-0 pointer-events-none"
               >
-                <div className="text-white/50 md:mb-8">{ind.icon}</div>
+                <div className="text-white/80 md:mb-8">{ind.icon}</div>
                 <h3 className="text-white font-bold tracking-widest uppercase text-sm md:whitespace-nowrap md:-rotate-90 md:transform md:origin-center">
                   {ind.name}
                 </h3>
@@ -71,14 +71,14 @@ export default function IndustryShowcase() {
               >
                 <div className="text-white mb-4 md:mb-6 hidden md:block">{ind.icon}</div>
                 <h3 className="text-3xl md:text-5xl font-black text-white tracking-tighter leading-none mb-1 md:mb-2">{ind.name}</h3>
-                <p className="text-white/60 font-mono text-xs md:text-sm tracking-widest uppercase mb-4 md:mb-8">{ind.sub}</p>
+                <p className="text-white/90 font-mono text-xs md:text-sm tracking-widest uppercase mb-4 md:mb-8">{ind.sub}</p>
                 
                 <div className="space-y-3 md:space-y-4 mb-4 md:mb-8">
-                  <p className="text-[10px] md:text-xs text-white/40 font-bold uppercase tracking-wider border-b border-white/10 pb-2 hidden md:block">Core Features</p>
+                  <p className="text-[10px] md:text-xs text-white font-bold uppercase tracking-wider border-b border-white/10 pb-2 hidden md:block">Core Features</p>
                   {ind.features.map((feat, idx) => (
                     <div key={idx} className="flex items-center text-white/80">
                       <ArrowRight className="w-3 h-3 md:w-4 md:h-4 mr-3 md:mr-4 text-[#00E5FF]" />
-                      <span className="text-sm md:text-lg font-light">{feat}</span>
+                      <span className="text-sm md:text-lg font-normal">{feat}</span>
                     </div>
                   ))}
                 </div>

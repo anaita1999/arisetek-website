@@ -24,7 +24,7 @@ export default function AIExperience() {
           >
             See AI working for you in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#9D00FF]">real-time.</span>
           </motion.h2>
-          <p className="text-white/70 text-lg drop-shadow-md">Watch how a single customer inquiry automatically triggers a flawless operational workflow.</p>
+          <p className="text-white text-lg drop-shadow-md">Watch how a single customer inquiry automatically triggers a flawless operational workflow.</p>
         </div>
 
         <div className="relative">
@@ -50,7 +50,7 @@ export default function AIExperience() {
                         <div className="p-2 bg-[#00E5FF]/20 text-[#00E5FF] rounded-lg shadow-[0_0_15px_rgba(0,229,255,0.3)]">
                           {step.icon}
                         </div>
-                        <span className="text-xs font-bold text-white/50 uppercase tracking-widest">{step.label}</span>
+                        <span className="text-xs font-bold text-white/80 uppercase tracking-widest">{step.label}</span>
                       </div>
                       <p className="text-white/90 font-medium">{step.text}</p>
                     </div>

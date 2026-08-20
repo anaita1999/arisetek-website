@@ -78,13 +78,13 @@ export default function Services() {
                 </span>
                 {pillar.icon}
                 <h3 className="text-3xl md:text-5xl font-bold text-white mt-6 md:mt-8 mb-4 md:mb-6 tracking-tighter">{pillar.title}</h3>
-                <p className="text-lg md:text-xl text-white/60 font-light leading-relaxed max-w-md">
+                <p className="text-lg md:text-xl text-white/90 font-normal leading-relaxed max-w-md">
                   {pillar.description}
                 </p>
               </div>
 
               <div className="flex-1 w-full bg-white/5 border border-white/10 rounded-[2rem] p-6 md:p-8 backdrop-blur-md">
-                <h4 className="text-xs md:text-sm tracking-[0.2em] uppercase text-white/40 mb-6 md:mb-8 border-b border-white/10 pb-4">Core Capabilities</h4>
+                <h4 className="text-xs md:text-sm tracking-[0.2em] uppercase text-white mb-6 md:mb-8 border-b border-white/10 pb-4">Core Capabilities</h4>
                 <ul className="space-y-4 md:space-y-6">
                   {pillar.examples.map((item, i) => (
                     <li key={i} className="flex items-center group/item cursor-default">

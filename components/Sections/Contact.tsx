@@ -19,7 +19,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }} 
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ delay: 0.1 }}
-            className="text-lg text-white/70 mb-12 max-w-md drop-shadow-md"
+            className="text-lg text-white mb-12 max-w-md drop-shadow-md"
           >
             Ready to upgrade your digital presence? Send a message or schedule a quick discovery call.
           </motion.p>
@@ -42,15 +42,15 @@ export default function Contact() {
         >
           <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
             <div>
-              <label className="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">Name</label>
+              <label className="block text-xs font-bold text-white/90 uppercase tracking-widest mb-2">Name</label>
               <input type="text" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E5FF] transition-colors shadow-inner" placeholder="John Doe" />
             </div>
             <div>
-              <label className="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">Email</label>
+              <label className="block text-xs font-bold text-white/90 uppercase tracking-widest mb-2">Email</label>
               <input type="email" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E5FF] transition-colors shadow-inner" placeholder="john@company.com" />
             </div>
             <div>
-              <label className="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">Project Details</label>
+              <label className="block text-xs font-bold text-white/90 uppercase tracking-widest mb-2">Project Details</label>
               <textarea rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E5FF] transition-colors shadow-inner" placeholder="Tell me about your goals..."></textarea>
             </div>
             <button className="w-full py-4 bg-[#00E5FF]/20 text-[#00E5FF] font-bold rounded-xl hover:bg-[#00E5FF] hover:text-black transition-colors border border-[#00E5FF]/40 shadow-[0_0_15px_rgba(0,229,255,0.2)] hover:shadow-[0_0_30px_rgba(0,229,255,0.6)]">
@@ -59,7 +59,7 @@ export default function Contact() {
             
             <div className="relative flex items-center py-2">
               <div className="flex-grow border-t border-white/10"></div>
-              <span className="flex-shrink-0 mx-4 text-white/40 text-xs uppercase font-bold">Or</span>
+              <span className="flex-shrink-0 mx-4 text-white text-xs uppercase font-bold">Or</span>
               <div className="flex-grow border-t border-white/10"></div>
             </div>
 

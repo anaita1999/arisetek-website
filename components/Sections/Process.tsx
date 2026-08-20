@@ -86,7 +86,7 @@ export default function Process() {
                       <h3 className="text-3xl font-bold text-white mb-4 tracking-tighter">
                         {step.title}
                       </h3>
-                      <p className="text-white/50 text-lg font-light leading-relaxed">
+                      <p className="text-white/80 text-lg font-normal leading-relaxed">
                         {step.desc}
                       </p>
                     </motion.div>

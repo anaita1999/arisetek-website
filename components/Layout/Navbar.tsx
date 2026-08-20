@@ -45,12 +45,12 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 group z-50 relative">
           <img src="/logo.png" alt="Arisetek Logo" className="h-6 md:h-8 w-auto group-hover:scale-110 transition-transform duration-500" />
           <span className="text-lg md:text-2xl font-black tracking-tighter text-white">
-            Arisetek <span className="font-light text-white/50 tracking-widest text-[10px] md:text-sm uppercase ml-1 hidden sm:inline-block">IT Solutions</span>
+            Arisetek <span className="font-normal text-white/80 tracking-widest text-[10px] md:text-sm uppercase ml-1 hidden sm:inline-block">IT Solutions</span>
           </span>
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-10 text-xs font-mono uppercase tracking-[0.2em] text-white/60">
+        <nav className="hidden lg:flex items-center gap-10 text-xs font-mono uppercase tracking-[0.2em] text-white/90">
           {navLinks.map((link) => (
             <Link key={link.name} href={link.href} className="hover:text-[#00E5FF] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-[#00E5FF] hover:after:w-full after:transition-all after:duration-300">
               {link.name}

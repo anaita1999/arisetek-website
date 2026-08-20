@@ -72,7 +72,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
-              className="absolute right-0 bottom-0 max-w-xs text-white/50 text-sm hidden lg:block tracking-widest leading-relaxed uppercase"
+              className="absolute right-0 bottom-0 max-w-xs text-white/80 text-sm hidden lg:block tracking-widest leading-relaxed uppercase"
             >
               Automated workflows, AI chat logic, and cinematic digital products engineered to solve business friction.
             </motion.div>
@@ -96,7 +96,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1] rounded-full" />
           </motion.a>
 
-          <a href="#portfolio" className="text-white/50 uppercase tracking-[0.2em] text-[10px] md:text-xs hover:text-[#00E5FF] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-[#00E5FF] hover:after:w-full after:transition-all after:duration-300">
+          <a href="#portfolio" className="text-white/80 uppercase tracking-[0.2em] text-[10px] md:text-xs hover:text-[#00E5FF] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-[#00E5FF] hover:after:w-full after:transition-all after:duration-300">
             View Live Portfolio
           </a>
         </motion.div>
