@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Arisetek connected intelligence mark</title>
+  <desc id="desc">An ascending path of connected nodes representing integrated technology solutions</desc>
+  <defs>
+    <linearGradient id="signal" x1="106" y1="362" x2="402" y2="126" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8A5CFF"/><stop offset=".5" stop-color="#25E5FF"/><stop offset="1" stop-color="#E8FCFF"/>
+    </linearGradient>
+  </defs>
+  <path d="M104 344 206 202 294 286 408 138" fill="none" stroke="url(#signal)" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="104" cy="344" r="30" fill="#8A5CFF"/>
+  <circle cx="206" cy="202" r="30" fill="#25E5FF"/>
+  <circle cx="294" cy="286" r="30" fill="#25E5FF"/>
+  <circle cx="408" cy="138" r="30" fill="#E8FCFF"/>
+</svg>
